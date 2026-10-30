@@ -1,0 +1,14 @@
+{
+  "earth_radius_m": 6378137.0,
+  "degrees_for_300m_equator": 0.002694945852358564,
+  "distance_tolerance_m": 0.000001,
+  "time_tolerance_s": 0.0000001,
+  "coordinate_tolerance_deg": 0.000000001,
+  "schedule_300m": {"speed_m_s": 3, "duration_s": 100, "send_cost_s": 0.15, "max_start_error_s": 0.0000001, "event_count": 101},
+  "csv_fields": ["time_s", "latitude", "longitude", "distance_m", "loop"],
+  "local_latitude_limit_deg": 75,
+  "local_radius_limit_m": 100000,
+  "max_lateness_s": 2,
+  "send_timeout_s": 5,
+  "cleanup_timeout_s": 5
+}

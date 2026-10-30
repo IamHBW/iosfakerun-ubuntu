@@ -1,0 +1,25 @@
+# Local runtime, credentials, images and generated evidence.
+/.venv/
+/.uv-cache/
+/.pytest_cache/
+/.pytest-tmp/
+/.reference/
+/outputs/
+/dist/
+__pycache__/
+*.py[cod]
+*.dmg
+*.signature
+*.pem
+*.key
+.env
+.env.*
+
+# Original task inputs and device-specific execution history stay local.
+/CODEX_TASK_iOSFakeRun_Ubuntu.md
+/PROGRESS.md
+/AGENTS.md
+/BLOCKED.md
+/IMPLEMENTATION_REPORT.md
+/docs/ACCEPTANCE.md
+/docs/HARDWARE_CHECKLIST.md

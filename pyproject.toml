@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling==1.33.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "iosfakerun"
+version = "0.1.0"
+description = "iOS 15 USB 局部路线回放命令行工具"
+readme = "README.md"
+license = "LGPL-2.1-only"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.10"
+dependencies = ["pymobiledevice3==11.48.0"]
+
+[project.urls]
+Repository = "https://github.com/IamHBW/iosfakerun-ubuntu"
+
+[project.scripts]
+iosfakerun = "iosfakerun.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--basetemp=.pytest-tmp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/iosfakerun"]
+
+[[tool.uv.index]]
+name = "tuna"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+default = true
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src", "/tests", "/examples",
+  "/docs/QUICKSTART.md", "/docs/STATUS.md", "/docs/TESTING.md", "/docs/YUQUAN_ROUTE.md",
+  "/README.md", "/THIRD_PARTY_NOTICES.md", "/LICENSE",
+  "/pyproject.toml", "/uv.lock", "/.python-version", "/.gitignore",
+]
